@@ -5,9 +5,11 @@
   "main": "index.js",
   "jsnext:main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup --config rollup.config.js",
-    "build-demo": "cd demo && gulp && cd .."
+    "build-demo": "npm run build-css && npm run build-html && npm run build-js",
+    "build-js": "browserify ./demo/src/js/index.js -o ./demo/build/app.js -t [ babelify --presets [ es2015 react ] ]",
+    "build-css": "node-sass ./demo/src/sass/style.scss --output ./demo/build/css/",
+    "build-html": "cp ./demo/src/html/index.html ./demo/build/"
   },
   "repository": {
     "type": "git",
