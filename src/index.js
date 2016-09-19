@@ -1,3 +1,3 @@
-export function helloWorld(message) {
-    console.log(message)
+export default function(parameters) {
+    console.log(parameters);
 }
