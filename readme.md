@@ -1,7 +1,10 @@
-# React Component Boilerplate
+# ES6 Module Boilerplate
 
 This is a simple boilerplate project to get started quickly with ES6 modules.
-The purpose of this is to make a module to easily publish on npm.
+The purpose of this is to make a module to easily publish on npm. Write your
+ES6 in the src/index.js file and it will be automatically transpiled to ES5 in
+the root. Note that the package.json has a jsnext:main reference to the ES6 version
+for compatible bundlers (as of now, Rollup).
 
 ## Installation
 
